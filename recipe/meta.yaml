@@ -31,6 +31,7 @@ requirements:
     - fastapi
     - filetype
     - gradio
+    - jsonschema  # Imported but not in requirements
     - numpy
     - onnxruntime
     - opencv
@@ -38,9 +39,10 @@ requirements:
     - pooch
     - pymatting
     - python >=3.8,<3.12
-    - python-multipart
-    - scikit-image
+    - python-multipart  # Not imported
+    - scikit-image  # Not imported
     - scipy
+    - starlette  # Imported but not in requirements
     - tqdm
     - uvicorn
     - watchdog
