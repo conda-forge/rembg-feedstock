@@ -1,5 +1,5 @@
 {% set name = "rembg" %}
-{% set version = "2.0.51" %}
+{% set version = "2.0.52" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rembg-{{ version }}.tar.gz
-  sha256: 455b70d073a62a31a51023e18e2d33676d6fe6f82685f2af22b7985eaddb8ed4
+  sha256: 96d94241dd8520584e868c53554a96664097940b824fa74820ba29125fd3acf5
   patches:
     - cli.patch
 
@@ -31,6 +31,7 @@ requirements:
     - fastapi
     - filetype
     - gradio
+    - jsonschema  # Imported but not in requirements
     - numpy
     - onnxruntime
     - opencv
@@ -38,9 +39,10 @@ requirements:
     - pooch
     - pymatting
     - python >=3.8,<3.12
-    - python-multipart
-    - scikit-image
+    - python-multipart  # Not imported
+    - scikit-image  # Not imported
     - scipy
+    - starlette  # Imported but not in requirements
     - tqdm
     - uvicorn
     - watchdog
