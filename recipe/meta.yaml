@@ -25,13 +25,7 @@ requirements:
     - setuptools >=65.5.1
     - wheel
   run:
-    - aiohttp
-    - asyncer
-    - click
-    - fastapi
-    - filetype
-    - gradio
-    - jsonschema  # Imported but not in requirements
+    - jsonschema
     - numpy
     - onnxruntime
     - opencv
@@ -39,11 +33,18 @@ requirements:
     - pooch
     - pymatting
     - python >=3.8,<3.12
-    - python-multipart  # Not imported
-    - scikit-image  # Not imported
+    - scikit-image        # Not imported
     - scipy
-    - starlette  # Imported but not in requirements
     - tqdm
+    # Optional for CLI extras
+    - aiohttp
+    - asyncer
+    - click
+    - fastapi
+    - filetype
+    - gradio
+    - python-multipart
+    - starlette           # Imported but not in requirements
     - uvicorn
     - watchdog
 
