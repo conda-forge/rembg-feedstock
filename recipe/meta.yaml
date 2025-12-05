@@ -16,12 +16,12 @@ build:
     - rembg=rembg.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8,<3.12
+    - python {{ python_min }}
     - setuptools >=65.5.1
     - wheel
   run:
@@ -32,7 +32,7 @@ requirements:
     - pillow
     - pooch
     - pymatting
-    - python >=3.8,<3.12
+    - python >={{ python_min }},<3.12
     - scikit-image        # Not imported
     - scipy
     - tqdm
@@ -58,6 +58,7 @@ test:
     - rembg --help  # Added patch to fix this
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/rembg
