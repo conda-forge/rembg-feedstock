@@ -1,5 +1,5 @@
 {% set name = "rembg" %}
-{% set version = "2.0.74" %}
+{% set version = "2.0.75" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rembg-{{ version }}.tar.gz
-  sha256: be21140841c6eef7ce4eaee3944124aac46e8670850c5d04ce6f3133d8455e25
+  sha256: e2143fb5838c8b2238fa45d765ce18d0710801d5aef73f2c4ac9377991d1f526
   patches:
     - cli.patch
 
