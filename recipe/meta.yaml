@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rembg-{{ version }}.tar.gz
   sha256: 848cb55027cbd5116105dcb86003a6a4ba66812237ec869c70d2960227256b01
-  patches:
-    - cli.patch
 
 build:
   entry_points:
@@ -55,7 +53,7 @@ test:
   commands:
     - pip list
     # - pip check  # Fails due to opencv
-    - rembg --help  # Added patch to fix this
+    - rembg --help
   requires:
     - pip
     - python {{ python_min }}
