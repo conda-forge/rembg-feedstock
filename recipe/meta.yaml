@@ -1,5 +1,6 @@
 {% set name = "rembg" %}
 {% set version = "2.0.77" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,8 +9,6 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rembg-{{ version }}.tar.gz
   sha256: 848cb55027cbd5116105dcb86003a6a4ba66812237ec869c70d2960227256b01
-  patches:
-    - cli.patch
 
 build:
   entry_points:
@@ -22,8 +21,8 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools >=65.5.1
-    - wheel
+    - poetry-core >=1.0.0
+    - poetry-dynamic-versioning >=1.0.0,<2.0.0
   run:
     - jsonschema
     - numpy
@@ -32,7 +31,7 @@ requirements:
     - pillow
     - pooch
     - pymatting
-    - python >={{ python_min }},<3.12
+    - python >={{ python_min }},<4.0
     - scikit-image        # Not imported
     - scipy
     - tqdm
@@ -55,7 +54,7 @@ test:
   commands:
     - pip list
     # - pip check  # Fails due to opencv
-    - rembg --help  # Added patch to fix this
+    - rembg --help
   requires:
     - pip
     - python {{ python_min }}
