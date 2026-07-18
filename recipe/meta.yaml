@@ -20,8 +20,8 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools >=65.5.1
-    - wheel
+    - poetry-core >=1.0.0
+    - poetry-dynamic-versioning >=1.0.0,<2.0.0
   run:
     - jsonschema
     - numpy
