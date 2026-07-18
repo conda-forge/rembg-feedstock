@@ -1,5 +1,6 @@
 {% set name = "rembg" %}
 {% set version = "2.0.77" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -30,7 +31,7 @@ requirements:
     - pillow
     - pooch
     - pymatting
-    - python >={{ python_min }},<3.12
+    - python >={{ python_min }},<4.0
     - scikit-image        # Not imported
     - scipy
     - tqdm
