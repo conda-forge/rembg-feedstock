@@ -1,5 +1,5 @@
 {% set name = "rembg" %}
-{% set version = "2.0.85" %}
+{% set version = "2.0.86" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/rembg-{{ version }}.tar.gz
-  sha256: 3fedbf2a3efa949c33b5c8be172fd03d98347d96cb3fda8e719041c8690d13cd
+  sha256: 9c409038acbd52cc2f5e0183c9d0c155aa3798d0707e0f82f71dcdb6937e2dbf
 
 build:
   entry_points:
