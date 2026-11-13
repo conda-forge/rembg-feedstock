@@ -190,5 +190,4 @@ Feedstock Maintainers
 =====================
 
 * [@danielgatis](https://github.com/danielgatis/)
-* [@goanpeca](https://github.com/goanpeca/)
 
